@@ -39,3 +39,7 @@ X = onehotencoder.fit_transform(X).toarray()
 #using labler encoder for dependent variable
 encode_Y = LabelEncoder()
 Y = encode_Y.fit_transform(Y)
+
+#splitting the dataset for Training and Test
+from sklearn.model_selection import train_test_split
+X_train,X_test,y_train,y_test = train_test_split(X,Y,test_size = 0.2,random_state=0)
