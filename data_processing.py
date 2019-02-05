@@ -30,7 +30,8 @@ X[:,0] = encode_X.fit_transform(X[:,0])
 '''
 but this create problem as it will assign numbers which will
 make one country important then other which is not true
-USING ONEHOTENCODER
+USING ONEHOTENCODER which will create different column for each country and assign 1 or 0 for
+whether the country is present for the row
 '''
 onehotencoder = OneHotEncoder(categorical_features=[0])
 X = onehotencoder.fit_transform(X).toarray()
